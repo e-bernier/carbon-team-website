@@ -3,9 +3,8 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
-title: Home
-permalink: /
+title: News
+permalink: /news
 ---
 
-# CAPTURE CO2
-AT THE EXIT OF GAS BOILERS OR DIRECTLY FROM THE ATMOSPHERE
+# LATEST NEWS

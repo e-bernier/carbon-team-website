@@ -3,20 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>{{ page.title }}</title>
+    <title>
+        {{ page.title }}
+    </title>
 </head>
 
 <body>
     <header>
-        <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
+        <nav>
+            <a href="{{ '/' | relative_url }}">Home</a>         <!-- Create a link to the home page -->
+            <a href="{{ '/news' | relative_url }}">News</a>     <!-- Create a link to the news page -->
+        </nav>
     </header>
+
+    <hr>
 
     <main>
         {{ content }}
     </main>
 
     <footer>
-        <p>© {{ site.time | date: "%Y" }} My Awesome Site </p>
+        <p>© {{ site.time | date: "%Y" }} The Carbon Team </p>
     </footer>
 </body>
 
