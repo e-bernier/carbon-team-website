@@ -7,5 +7,22 @@ title: Home
 permalink: /
 ---
 
-# CAPTURE CO2
-AT THE EXIT OF GAS BOILERS OR DIRECTLY FROM THE ATMOSPHERE
+<section id="OUR GOAL">
+    <h1>OUR GOAL</h1>
+    <p>Our goal is to capture CO2 at the exit of gas boilers or directly from the atmosphere.</p>
+</section>
+
+<section id="OUR TECHNOLOGY">
+    <h1>OUR TECHNOLOGY</h1>
+    <p>We use cutting-edge technology to reduce carbon emissions.</p>
+</section>
+
+<section id="THE TEAM">
+    <h1>THE TEAM</h1>
+    <p>Meet the passionate team behind our mission.</p>
+</section>
+
+<section id="CONTACT US">
+    <h1>CONTACT US</h1>
+    <p>Get in touch with us for more information.</p>
+</section>

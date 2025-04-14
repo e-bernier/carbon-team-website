@@ -1,29 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>
-        {{ page.title }}
-    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
 
 <body>
     <header>
-        <nav>
-            <a href="{{ '/' | relative_url }}">Home</a>         <!-- Create a link to the home page -->
-            <a href="{{ '/news' | relative_url }}">News</a>     <!-- Create a link to the news page -->
+        <!-- Main navigation bar -->
+        <nav class="main-nav">
+            <div class="nav-left">
+                <a href="{{ '/' | relative_url }}">Home</a>
+                <a href="{{ '/news' | relative_url }}">News</a>
+            </div>
+            <div class="nav-right">
+                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="nav-logo">
+            </div>
+        </nav>
+
+        <!-- Secondary navigation bar for section links -->
+        <nav class="section-nav">
+            {% if page.title == "Home" %}
+                <a href="#OUR GOAL">OUR GOAL</a>
+                <a href="#OUR TECHNOLOGY">OUR TECHNOLOGY</a>
+                <a href="#THE TEAM">THE TEAM</a>
+                <a href="#CONTACT US">CONTACT US</a>
+            {% elsif page.title == "News" %}
+                <a href="#ARTICLES">ARTICLES</a>
+                <a href="#SEMESTER PROJECTS">SEMESTER PROJECTS</a>
+                <a href="#MEET OUR TEAMS">MEET OUR TEAMS</a>
+                <a href="#COMPETITIONS">COMPETITIONS</a>
+                <a href="#PROJECTS UPDATES">PROJECTS UPDATE</a>
+            {% endif %}
         </nav>
     </header>
-
-    <hr>
 
     <main>
         {{ content }}
     </main>
 
     <footer>
-        <p>© {{ site.time | date: "%Y" }} The Carbon Team </p>
+        <p>© {{ site.time | date: "%Y" }} The Carbon Team</p>
     </footer>
 </body>
 
