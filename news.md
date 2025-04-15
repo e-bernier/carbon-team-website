@@ -6,6 +6,13 @@ layout: default
 title: News
 permalink: /news
 ---
+<section id="title-section">
+    <div class="title-content">
+        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Title Image" class="title-image">
+        <h1 class="title-text">NEWS</h1>
+        <h2 class="subtitle-text">STAY UPDATED ON THE <strong>LATEST NEWS</strong> <br>FROM THE EPFL <strong>CARBON TEAM</strong> </h2>
+    </div>
+</section>
 
 <section id="ARTICLES">
     <h1>ARTICLES</h1>

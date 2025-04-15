@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -13,8 +14,8 @@
         <!-- Main navigation bar -->
         <nav class="main-nav">
             <div class="nav-left">
-                <a href="{{ '/' | relative_url }}">Home</a>
-                <a href="{{ '/news' | relative_url }}">News</a>
+                <a href="{{ '/' | relative_url }}">HOME</a>
+                <a href="{{ '/news' | relative_url }}">NEWS</a>
             </div>
             <div class="nav-right">
                 <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="nav-logo">
@@ -44,6 +45,7 @@
 
     <footer>
         <p>© {{ site.time | date: "%Y" }} The Carbon Team</p>
+        <p><a href="{{ '/assets/docs/status_CarbonTeam.pdf' | relative_url }}" target="_blank">Status</a></p>
     </footer>
 </body>
 

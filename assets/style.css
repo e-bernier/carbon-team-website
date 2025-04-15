@@ -27,6 +27,9 @@ header {
     font-size: 22px;
     line-height: 60px;
     height: 60px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .nav-left {
@@ -40,6 +43,9 @@ header {
     padding: 20px 20px;
     font-size: 22px;
     line-height: 10px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .nav-left a:hover {
@@ -67,6 +73,9 @@ header {
     font-size: 18px;
     line-height: 45px;
     height: 45px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .section-nav a {
@@ -76,6 +85,9 @@ header {
     padding: 10px 15px;
     font-size: 18px;
     line-height: 15px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .section-nav a:hover {
@@ -85,19 +97,106 @@ header {
 
 /* Main content styles */
 main {
-    margin-top: 140px;
-    padding: 20px;
+    margin-top: 85px;
 }
 
-section {
-    background-color: #1a1a1a;
+/* Title section styles */
+.title-content {
+    text-align: center;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-text {
+    font-size: 60px;
+    font-weight: bold;
     color: #f0f0f0;
-    margin-bottom: 40px;
-    padding: 20px;
-    border-radius: 5px;
-    border: 1px solid #333;
+    letter-spacing: 1.5px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.subtitle-text {
+    font-size: 24px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 300;
+    color: #f0f0f0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    letter-spacing: 0.1px;
+    line-height: 1.2;
+}
+
+/* Override format to keep bold text bold */
+.subtitle-text strong {
+    font-weight: bold;
+}
+
+.title-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+    display: inline;
+}
+
+/* Section styles */
+section {
+    width: 100%;
+    background: linear-gradient(to bottom, #1e1e1e, #000);
+    color: #f0f0f0;
+    padding: 10px 20px 20px;
     font-size: 18px;
     line-height: 1.6;
+    scroll-margin-top: 100px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Section title styles */
+section > h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #f0f0f0;
+    margin-top: 0;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+section > h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 1px;
+    background-color: #f0f0f0;
+    margin: 10px auto 0;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between; /* Distribute images evenly */
+    margin: 20px 0; /* Add spacing above and below the row */
+    flex-wrap: wrap; /* Ensure images stack on smaller screens */
+    width: 100%; /* Ensure the row does not exceed the container width */
+    box-sizing: content-box; /* Include padding and borders in the width calculation */
+}
+
+.goal-image {
+    width: 45%; /* Each image takes up slightly less than half the row's width */
+    max-width: 100%; /* Allow images to scale down on smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+}
+
+@media (max-width: 768px) {
+    .goal-image {
+        width: 100%; /* On smaller screens, each image takes the full width */
+        margin-bottom: 10px; /* Add spacing between stacked images */
+    }
 }
 
 /* Footer styles */
@@ -109,4 +208,10 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
