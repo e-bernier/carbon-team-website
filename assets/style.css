@@ -156,6 +156,10 @@ header {
 
 /* Main content styles */
 main {
+    margin-top: 60px;
+}
+
+.has-secondary-nav main {
     margin-top: 85px;
 }
 
@@ -269,17 +273,7 @@ section > h1::after {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
 }
 
-.team-image {
-    width: 100%; /* Make the image responsive */
-    max-width: 800px; /* Limit the maximum width */
-    height: auto; /* Maintain aspect ratio */
-    margin: 20px auto; /* Center the image and add spacing */
-    display: block; /* Ensure the image is treated as a block element */
-    border-radius: 10px; /* Optional: Add rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
-}
-
-.lab-image {
+.solo-image {
     width: 100%; /* Make the image responsive */
     max-width: 800px; /* Limit the maximum width */
     height: auto; /* Maintain aspect ratio */
@@ -294,6 +288,15 @@ section > h1::after {
         width: 100%; /* On smaller screens, each image takes the full width */
         margin-bottom: 10px; /* Add spacing between stacked images */
     }
+}
+
+/* General article text styles */
+.article-text {
+    max-width: 800px; /* Set a wider maximum width for article text */
+    margin: 0 auto; /* Center the text container */
+    text-align: justify; /* Justify the text for better readability */
+    line-height: 1.8; /* Increase line spacing for readability */
+    word-wrap: break-word; /* Ensure long words break properly */
 }
 
 /* Footer styles */

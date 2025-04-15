@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="{% if page.title == 'Home' or page.title == 'News' %}has-secondary-nav{% endif %}">
     <header>
         <!-- Main navigation bar -->
         <nav class="main-nav">
@@ -23,6 +23,7 @@
         </nav>
 
         <!-- Secondary navigation bar for section links -->
+        {% if page.title == "Home" or page.title == "News" %}
         <nav class="section-nav">
             <div class="menu-icon" id="menu-icon">
                 <!-- Hamburger icon -->
@@ -45,6 +46,7 @@
                 {% endif %}
             </div>
         </nav>
+        {% endif %}
     </header>
 
     <main>

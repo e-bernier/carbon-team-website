@@ -16,7 +16,11 @@ permalink: /news
 
 <section id="ARTICLES">
     <h1>ARTICLES</h1>
-    <p>Our goal is to capture CO2 at the exit of gas boilers or directly from the atmosphere.</p>
+    <p><strong>Ever wonder how we can trap CO₂ out of thin air — and then let it go on command?</strong>
+    At the Carbon Team, we’re working with smart materials called adsorbents that do just that. Paired with a process called TSA (temperature swing adsorption), they help us capture and reuse CO₂.</p> <p><a href="{{ '/news/adsorbants' | relative_url }}">Read the full article here</a></p>
+    <br>
+    <p><strong>What if a material thinner than anything you can see could help fight climate change?</strong>
+    Graphene membranes might be tiny, but their impact could be huge — from filtering CO₂ with atomic precision to transforming how we produce clean energy. Curious how it all works (and what’s still holding it back)?</p> <p><a href="{{ '/news/graphene-membranes' | relative_url }}">Read the full article here</a></p>
 </section>
 
 <section id="SEMESTER PROJECTS">

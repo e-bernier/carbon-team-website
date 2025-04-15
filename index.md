@@ -39,17 +39,18 @@ permalink: /
     <br>filter trapping CO2 from the incoming air.
     <br>
     <br><strong>Pneumatix</strong> connects both other parts whose combination allows for this CO2 capture process <strong>optimisation</strong>. </p>
+    <img src="{{ '/assets/images/bro_en.jpg' | relative_url }}" alt="Technology Image" class="solo-image">
 </section>
 
 <section id="THE TEAM">
     <h1>THE TEAM</h1>
     <p>We are composed of 60 motivated students who are convinced that we can use what we learn in class to fight against <strong>climate change</strong></p>
-    <img src="{{ '/assets/images/photo2024.jpeg' | relative_url }}" alt="Team Photo 2024" class="team-image">
+    <img src="{{ '/assets/images/photo2024.jpeg' | relative_url }}" alt="Team Photo 2024" class="solo-image">
 </section>
 
 <section id="CONTACT US">
     <h1>CONTACT US</h1>
     <p> Interested in one of our credited projects ? You want to be part of the association ? Then write us at the following address ! </p>
     <p class="contact-email"><strong>carbonteam@epfl.ch</strong></p>
-    <img src="{{ '/assets/images/lab.webp' | relative_url }}" alt="Lab Photo 2024" class="lab-image">
+    <img src="{{ '/assets/images/lab.webp' | relative_url }}" alt="Lab Photo 2024" class="solo-image">
 </section>
