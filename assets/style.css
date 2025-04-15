@@ -69,19 +69,20 @@ header {
     display: flex;
     align-items: center;
     background-color: #1b1b1b;
-    padding-left: 25px;
+    padding-inline: 15px; /* Logical property for padding */
     font-size: 18px;
     line-height: 45px;
     height: 45px;
     font-family: 'Roboto', Arial, sans-serif;
     font-weight: bold;
     letter-spacing: 1px;
+    position: relative;
 }
 
 .section-nav a {
     color: white;
     text-decoration: none;
-    margin-right: 15px;
+    margin-inline: 10px; /* Logical property for margin */
     padding: 10px 15px;
     font-size: 18px;
     line-height: 15px;
@@ -93,6 +94,64 @@ header {
 .section-nav a:hover {
     background-color: #333;
     border-radius: 5px;
+}
+
+/* Hamburger menu icon */
+.menu-icon {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    cursor: pointer;
+}
+
+.menu-icon .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Hidden menu links */
+.menu-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-links a {
+    display: inline-block;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .menu-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 45px;
+        left: 0;
+        width: 100%;
+        background-color: #1b1b1b;
+        z-index: 1000;
+    }
+
+    .menu-links a {
+        padding: 10px 15px;
+        text-align: left;
+        border-bottom: 1px solid #333;
+    }
+
+    .menu-links a:hover {
+        background-color: #444;
+    }
+
+    .menu-icon {
+        display: flex; /* Show hamburger icon */
+    }
+
+    .menu-links.open {
+        display: flex; /* Show menu when open */
+    }
 }
 
 /* Main content styles */
@@ -155,13 +214,23 @@ section {
     text-align: center;
 }
 
+/* General text container styles */
+section p {
+    font-family: system-ui;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.6;
+    word-wrap: break-word;
+}
+
 /* Section title styles */
 section > h1 {
     text-align: center;
     font-size: 36px;
     font-weight: bold;
     color: #f0f0f0;
-    margin-top: 0;
+    margin-top: 0px;
     margin-bottom: 10px;
     position: relative;
 }
@@ -172,22 +241,50 @@ section > h1::after {
     width: 80px;
     height: 1px;
     background-color: #f0f0f0;
-    margin: 10px auto 0;
+    margin: 0px auto 0;
+}
+
+.contact-email {
+    font-size: 20px; /* Make the email text larger */
+    text-align: center; /* Center the email text */
+    margin-top: 10px; /* Add spacing above the email */
+    color: #f0f0f0; /* Optional: Ensure the email matches the site's color scheme */
 }
 
 .image-row {
     display: flex;
-    justify-content: space-between; /* Distribute images evenly */
-    margin: 20px 0; /* Add spacing above and below the row */
-    flex-wrap: wrap; /* Ensure images stack on smaller screens */
-    width: 100%; /* Ensure the row does not exceed the container width */
-    box-sizing: content-box; /* Include padding and borders in the width calculation */
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: content-box;
 }
 
 .goal-image {
     width: 45%; /* Each image takes up slightly less than half the row's width */
     max-width: 100%; /* Allow images to scale down on smaller screens */
     height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+}
+
+.team-image {
+    width: 100%; /* Make the image responsive */
+    max-width: 800px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px auto; /* Center the image and add spacing */
+    display: block; /* Ensure the image is treated as a block element */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+}
+
+.lab-image {
+    width: 100%; /* Make the image responsive */
+    max-width: 800px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px auto; /* Center the image and add spacing */
+    display: block; /* Ensure the image is treated as a block element */
     border-radius: 10px; /* Optional: Add rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
 }

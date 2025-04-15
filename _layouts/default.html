@@ -24,18 +24,26 @@
 
         <!-- Secondary navigation bar for section links -->
         <nav class="section-nav">
-            {% if page.title == "Home" %}
-                <a href="#OUR GOAL">OUR GOAL</a>
-                <a href="#OUR TECHNOLOGY">OUR TECHNOLOGY</a>
-                <a href="#THE TEAM">THE TEAM</a>
-                <a href="#CONTACT US">CONTACT US</a>
-            {% elsif page.title == "News" %}
-                <a href="#ARTICLES">ARTICLES</a>
-                <a href="#SEMESTER PROJECTS">SEMESTER PROJECTS</a>
-                <a href="#MEET OUR TEAMS">MEET OUR TEAMS</a>
-                <a href="#COMPETITIONS">COMPETITIONS</a>
-                <a href="#PROJECTS UPDATES">PROJECTS UPDATE</a>
-            {% endif %}
+            <div class="menu-icon" id="menu-icon">
+                <!-- Hamburger icon -->
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="menu-links" id="menu-links">
+                {% if page.title == "Home" %}
+                    <a href="#OUR GOAL">OUR GOAL</a>
+                    <a href="#OUR TECHNOLOGY">OUR TECHNOLOGY</a>
+                    <a href="#THE TEAM">THE TEAM</a>
+                    <a href="#CONTACT US">CONTACT US</a>
+                {% elsif page.title == "News" %}
+                    <a href="#ARTICLES">ARTICLES</a>
+                    <a href="#SEMESTER PROJECTS">SEMESTER PROJECTS</a>
+                    <a href="#MEET OUR TEAMS">MEET OUR TEAMS</a>
+                    <a href="#COMPETITIONS">COMPETITIONS</a>
+                    <a href="#PROJECTS UPDATES">PROJECTS UPDATE</a>
+                {% endif %}
+            </div>
         </nav>
     </header>
 
@@ -50,3 +58,34 @@
 </body>
 
 </html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const menuLinks = document.getElementById("menu-links");
+        const menuItems = menuLinks.querySelectorAll("a"); // Select all links inside the menu
+
+        // Ensure both elements exist before adding event listeners
+        if (menuIcon && menuLinks) {
+            // Toggle menu visibility when clicking the hamburger icon
+            menuIcon.addEventListener("click", function (event) {
+                event.stopPropagation(); // Prevent the click from propagating to the document
+                menuLinks.classList.toggle("open");
+            });
+
+            // Close the menu when clicking anywhere outside of it
+            document.addEventListener("click", function (event) {
+                if (!menuLinks.contains(event.target) && !menuIcon.contains(event.target)) {
+                    menuLinks.classList.remove("open");
+                }
+            });
+
+            // Close the menu when clicking on a menu link
+            menuItems.forEach(function (item) {
+                item.addEventListener("click", function () {
+                    menuLinks.classList.remove("open");
+                });
+            });
+        }
+    });
+</script>
